@@ -1,95 +1,44 @@
-# Path-Dependent Optical Expansion (PDOE)
+# Cosmological Quantum Information Transport (CQIT)
 
-Exploratory, falsifiable framework testing whether cosmological redshift could arise from a universal optical scaling field rather than solely from metric expansion.
+This repository now focuses on how redshift, photon loss, detector mode mismatch, noise, and horizons affect the **accessible quantum and classical information carried by light**.
 
-## Scientific status
+The repository retains its historical `path-dependent-optical-expansion` name, but the original PDOE redshift mechanism is archived and falsified. See `docs/ARCHIVED_PDOE.md`.
 
-This is a speculative research program, not evidence of a new law of nature. The direct circumference-only mechanism is rejected: ordinary spherical spreading changes amplitude, not radial wavelength. The retained candidate is a covariant path-dependent optical scaling law.
+## Is this new physics?
 
-## Minimal phenomenology
+No. The central ingredients are established physics:
+
+- finite-bandwidth redshift can act as coherent multimode mixing;
+- wavepackets stretch in time and shift in frequency;
+- photon loss and receiver mismatch reduce accessible channel capacity;
+- horizon communication rates can tend to zero asymptotically.
+
+The new research focus is an integrated **null-test framework**. It asks whether real data contain residual decoherence, polarization effects, timing anomalies, or excess noise beyond coherent redshift, ordinary loss, receiver mismatch, and known backgrounds.
+
+## Standard channel
 
 \[
-\frac{d\ln\omega}{ds}=-\Gamma,\qquad
-1+z=\exp\left(\int \Gamma\,ds\right).
+\mathcal N_{\rm standard}
+=\mathcal D_{\rm receiver}\circ\mathcal L_\eta\circ\mathcal U_z.
 \]
 
-A viable model must also reproduce event time dilation, distance duality, achromatic propagation, image sharpness, CMB spectral preservation, and multimessenger constraints.
+Only a reproducible failure of this calibrated null model could become a candidate for new physics.
 
 ## Run
 
 ```bash
-python -m pip install -r requirements.txt
-python run_analysis.py
-pytest -q
-```
-
-Outputs are written to `results/`.
-
-## Current conclusion
-
-- Ordinary spherical-wave expansion: no wavelength growth.
-- Beam-expansion coupling `Gamma = alpha theta_opt`: fails source/beam-geometry independence.
-- Universal optical-scaling field: mathematically testable but not yet distinct from an effective expanding geometry.
-
-## V3 decisive falsification
-
-The minimal smooth **photon-only** static optical-redshift completion is now
-falsified by GW170817. At the host redshift `z≈0.0098`, it predicts photons would
-arrive about 666,000 years before a gravitational wave traveling on the ordinary
-matter metric; the observed gamma-ray lag was only about 1.74 seconds. The
-static Euclidean branch also predicts a distance-duality factor
-`eta=1/(1+z)` instead of `eta=1`.
-
-The only remaining loopholes require photons and GWs to share the same evolving
-effective metric, an engineered non-monotonic/high-redshift transition, or a
-constitutive geometry that also changes beam focusing. These are open research
-possibilities, not validated explanations.
-
-Run:
-
-```bash
-python run_falsification.py
-pytest -q
-```
-
-## V4 comprehensive audit
-
-The repository tests the surviving model classes against the physical CMB
-temperature history, blackbody phase-space transport, FIRAS spectral
-distortions, BAO radial/transverse geometry, redshift drift, GRB dispersion,
-FRB photon-mass limits, atomic-clock drift, and polarization.
-
-The scientific classification is:
-
-- photon-only static-space explanations: falsified;
-- dissipative, dispersive, massive-photon, and gauge-kinetic variants: excluded
-  or strongly constrained;
-- universal coherent achromatic effective metric: mathematically open, but no
-  longer physically distinct from an evolving geometry without an additional
-  observable prediction.
-
-Run:
-
-```bash
-python run_comprehensive_audit.py
-pytest -q
-```
-
-See `docs/V4_COMPREHENSIVE_AUDIT.md`.
-
-## V5 quantum-information audit
-
-V5 separates coherent redshift from detector mismatch and photon loss. A finite-bandwidth photon mode is coherently dilated in frequency and stretched in time while preserving its norm and any independently encoded polarization qubit. A detector left at the emitted frequency can miss the photon, but a matched detector recovers unit mode fidelity. Geometric loss and noise reduce channel capacity toward zero.
-
-The electromagnetic wave does not become exactly flat at any finite redshift. Near a future event horizon, observable frequency and information rate approach zero only asymptotically.
-
-The full suite passes **35/35 software tests**. This validates the calculations and code paths, not a new cosmological theory.
-
-Run:
-
-```bash
+python -m pip install -e .[test]
+pytest
 python run_quantum_information_audit.py
-pytest -q
+python run_cqit_focus.py
 ```
 
-See `docs/V5_QUANTUM_INFORMATION_AUDIT.md`.
+## Validation
+
+The v6 working tree passes **44 automated tests** locally. GitHub Actions tests Python 3.10 and 3.12.
+
+## Research documents
+
+- `docs/CQIT_RESEARCH_PROGRAM.md` — current focus and discovery standard
+- `docs/V5_QUANTUM_INFORMATION_AUDIT.md` — executed redshift/information audit
+- `docs/ARCHIVED_PDOE.md` — rejected original hypothesis

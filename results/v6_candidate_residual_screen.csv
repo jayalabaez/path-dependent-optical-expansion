@@ -1,0 +1,4 @@
+case,significances,flag
+standard_null,"0.2,-0.4,1.1",False
+single_outlier,"5.4,0.3,-0.8",False
+two_independent_residuals,"5.4,-6.2,0.4",True
