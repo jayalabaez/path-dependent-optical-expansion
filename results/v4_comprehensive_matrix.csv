@@ -1,0 +1,12 @@
+test,model_class,status,metric,limit_or_target,interpretation
+CMB local temperature at z=0.89,post-emission path-only redshift with static radiation bath,FAIL,40.1 sigma,T=5.13±0.06 K versus static 2.725 K,The past radiation bath was physically hotter; redshift cannot occur only after emission.
+CMB local temperature scaling,globally evolving optical field,PASS_KINEMATIC,beta=0.006±0.018,beta=0,"Can pass only by making photon energies evolve everywhere, not merely with traveled circumference."
+CMB blackbody preservation,metric-like Liouville transport,PASS,RMS=0.00e+00,near zero,A coherent achromatic effective metric maps blackbodies to blackbodies.
+FIRAS spectral distortion,dissipative/scattering redshift,STRONGLY_CONSTRAINED,Δrho/rho≲3.35e-05,|mu|<47e-6,Generic energy exchange or photon conversion must be tiny; a Liouville-preserving branch is the loophole.
+BAO Alcock-Paczynski geometry,static exponential Euclidean mapping,FAIL_LIKELY,"z=0.5: +5.4%, z=1: +1.7%, z=2.33: -13.2%",DESI DR2 percent-level distance measurements,The one-function static mapping cannot freely match radial and transverse BAO geometry.
+Redshift drift,smooth optical index n(t)=exp(H0t),FUTURE_DISCRIMINANT,at z=3.962: +1.714e-02 vs LCDM -4.972e-03 m/s/yr,current ESPRESSO uncertainty ~3.6 m/s/yr,"Current data are far too weak, but the predicted sign differs from LCDM at high redshift."
+Energy-dependent dispersion,linear dispersive constitutive law,STRONGLY_CONSTRAINED,|δv/c|(1 eV)≲1.39e-29,E_QG>5.9 E_Pl,Any optical-redshift mechanism relying on appreciable energy dependence is excluded; achromatic models remain.
+Massive-photon completion,Proca-like photon mass,FAIL_AS_COSMOLOGICAL_MECHANISM,1-v/c at 1 eV≲7.93e-30,m_gamma<7.1e-51 kg,The permitted mass is far too small to generate cosmological optical redshift.
+Atomic-clock drift,gauge-kinetic scalar tied to alpha,FAIL_CONDITIONAL,mismatch 6.51e+07,|dot alpha/alpha|~1.1e-18/yr,Applies only when the optical background also changes the electromagnetic coupling.
+Cosmic birefringence,parity-even disformal metric,PASS_NULL,predicts zero rotation,ACT DR6 tentative beta=0.215±0.074 deg with unresolved systematics,A parity-even model is not excluded; parity-odd constitutive terms are separately testable.
+Universal effective metric,"all matter, photons and GWs share one evolving geometry",OPEN_BUT_REINTERPRETED,evades differential-speed and WEP tests,must fit CMB+BAO+SN+lensing+growth,This is no longer light stretching in static space; operationally it is metric cosmology.

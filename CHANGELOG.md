@@ -1,14 +1,5 @@
 # Changelog
 
-## 0.3.0 — decisive multimessenger falsification
-
-- Added a concrete homogeneous static optical-index completion.
-- Falsified the smooth photon-only branch with GW170817 timing and speed bounds.
-- Added the static-Euclidean distance-duality failure.
-- Recorded that homogeneous index evolution can reproduce `(1+z)` time dilation kinematically.
-- Added five automated falsification tests and reproducible result artifacts.
-- Expanded automated validation from 12 to 17 tests.
-
 ## 0.2.0 — first-principles audit
 
 - Added stationary-spacetime photon-energy no-go statement.
@@ -20,3 +11,22 @@
 - Added multimessenger delay scales and observational test matrix.
 - Reclassified the static Hubble-curve match as a benchmark shape degeneracy, not a data fit.
 - Expanded automated tests from 4 to 12 and added GitHub Actions CI.
+
+## 0.3.0
+
+- Added a concrete homogeneous static optical-index completion.
+- Falsified the smooth photon-only branch with GW170817 timing and speed bounds.
+- Added the static-Euclidean distance-duality failure.
+- Recorded that homogeneous index evolution can reproduce `(1+z)` time dilation kinematically.
+- Added five automated falsification tests and reproducible result artifacts.
+
+## 0.4.0 — comprehensive model-class audit
+
+- Expanded validation from 17 to 26 automated tests.
+- Added the 2025 ALMA CMB-temperature-at-redshift test.
+- Demonstrated exact blackbody preservation for Liouville/metric transport and isolated the FIRAS constraint to dissipative or non-Liouville branches.
+- Added an Alcock-Paczynski radial/transverse BAO geometry diagnostic.
+- Added redshift-drift predictions and the high-redshift sign discriminator.
+- Added GRB 221009A dispersion, FRB photon-mass, conditional atomic-clock, and birefringence constraints.
+- Reclassified the universal effective metric as open but operationally equivalent to evolving geometry.
+- Added `run_comprehensive_audit.py` and `docs/V4_COMPREHENSIVE_AUDIT.md`.
