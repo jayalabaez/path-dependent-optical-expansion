@@ -1,0 +1,2 @@
+z_host,H0_km_s_mpc,photon_travel_years,gw_travel_years,predicted_photon_advance_years,observed_gw_to_gamma_delay_seconds,timing_mismatch_factor,effective_average_cgamma_over_c_minus_1,published_fractional_speed_bound_used,speed_bound_mismatch_factor,max_smooth_local_optical_fraction_of_redshift
+0.0098,70.0,136224495.94592765,136890911.03531048,666415.0893828111,1.74,12086471738337.355,0.004892035641279602,3e-15,1630678547093.2007,6.122448979591837e-13
