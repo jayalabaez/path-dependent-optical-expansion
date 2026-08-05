@@ -1,0 +1,8 @@
+branch,status,reason,surviving_role
+Ordinary spherical wavefront growth,REJECTED AS REDSHIFT MECHANISM,"Optical expansion controls beam area and amplitude, not radial phase spacing.",Explains inverse-square dimming only.
+Circumference coupling Gamma=alpha theta_opt,REJECTED,"Depends on beam focusing, source geometry, and an arbitrary reference radius.",Useful falsified toy model.
+Phenomenological path drag d ln omega/ds=-Gamma,INCOMPLETE,In a stationary conservative local theory photon energy is conserved; a parallel drag can also be affine reparameterization rather than physical phase evolution.,Data-fitting ansatz only until derived from an action.
+Gauge-kinetic scalar B(phi) F^2,REJECTED AS PHASE-REDSHIFT COMPLETION,"Leading geometric optics keeps k^2=0 and modifies amplitude transport, while also inviting varying-alpha constraints.","Can model opacity/amplitude effects, not the proposed wavelength drift."
+Pure conformal optical metric C(phi)g,REJECTED AS DISTINCT PHOTON MECHANISM,Four-dimensional source-free Maxwell theory is conformally invariant and the null cone is unchanged.,"Frame re-description, not independent optical redshift."
+Disformal scalar-photon metric,"MATHEMATICALLY OPEN, STRONGLY CONSTRAINED","It changes the light cone, but produces an evolving-background endpoint factor and faces multimessenger, causality, CMB, and matter-coupling tests.",Primary retained branch for explicit calculations.
+Metric-affine constitutive tensor,FRONTIER / UNTESTED HERE,"Can alter light cones and intensity but generically risks birefringence, dispersion, polarization mixing, and photon-number changes.",Secondary research branch with distinctive signatures.
