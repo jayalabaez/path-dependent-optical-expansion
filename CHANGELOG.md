@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 — decisive multimessenger falsification
+
+- Added a concrete homogeneous static optical-index completion.
+- Falsified the smooth photon-only branch with GW170817 timing and speed bounds.
+- Added the static-Euclidean distance-duality failure.
+- Recorded that homogeneous index evolution can reproduce `(1+z)` time dilation kinematically.
+- Added five automated falsification tests and reproducible result artifacts.
+- Expanded automated validation from 12 to 17 tests.
+
 ## 0.2.0 — first-principles audit
 
 - Added stationary-spacetime photon-energy no-go statement.
