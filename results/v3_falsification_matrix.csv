@@ -1,0 +1,6 @@
+test,branch,result,reason
+GW170817 propagation timing,smooth homogeneous photon-only static optical redshift,FALSIFIED,predicts photon advance of 666415 years vs 1.74 s observed GW-to-gamma lag
+GW170817 speed bound,smooth photon-only optical contribution at z~0.0098,CONSTRAINED,local smooth optical fraction < 6.12e-13 under the linearized shared-history assumption
+supernova time dilation,homogeneous time-varying index,PASSES KINEMATICALLY,null-path mapping gives dt_obs/dt_emit=1+z
+cosmic distance duality,static Euclidean photon-number-conserving optical redshift,FALSIFIED UNLESS FOCUSING IS MODIFIED,"predicts eta=1/(1+z), not eta=1"
+universal shared optical metric,photons and GWs couple identically,NOT FALSIFIED BY GW170817,but the model is no longer photon-specific and behaves like an evolving effective metric
