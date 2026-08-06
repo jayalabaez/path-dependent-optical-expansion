@@ -1,0 +1,10 @@
+name,status,statistic,unit,threshold,note
+DES supernova time dilation: pure energy-loss model,FALSIFIED,89.71104725729155,sigma,5.0,"Pure energy loss predicts b=0, while DES measures b=1.003±0.005(stat)±0.010(sys)."
+DES time dilation: engineered pulse-stretch variant,PASS,0.26832815729996506,sigma,2.0,Adding an independent (1+z) pulse stretch passes this one observable but is no longer pure energy loss.
+CMB temperature at z=0.89: path-only static bath,FALSIFIED,40.07533333333333,sigma,5.0,A path-only model predicts the local bath remains T0; ALMA measures 5.13±0.06 K.
+CMB temperature: globally evolving radiation field,PASS,0.3526200000000035,sigma,2.0,"T(z)=T0(1+z) passes, but requires global cosmic evolution rather than distance-only loss."
+Distance duality: pure energy-loss static geometry,FALSIFIED,26.73786437626905,sigma diagnostic,5.0,At z=1 the model gives eta=2^-3/2; converted to the linear eta0 diagnostic it is far from PantheonPlus+BAO.
+Distance duality: energy loss plus pulse stretch,FALSIFIED,20.88,sigma diagnostic,5.0,"Adding time dilation changes eta(z=1) to 1/2, still far from eta≈1 unless focusing/geometry also evolves."
+Stochastic collision broadening at z=1,CONSTRAINED,9416879072.796747,minimum events,1000000000.0,"At R=140,000, a Poisson collision model needs >~10^10 tiny events to avoid resolvable broadening."
+Stationary redshift drift,FUTURE_TEST,0.0,dz/yr,,A stationary path-loss law predicts zero drift; current ESPRESSO uncertainty is still much too large.
+BAO Alcock-Paczynski geometry at z=2.33,FALSIFIED,0.1109193331308066,fraction,0.02,"Static r∝ln(1+z) geometry differs by order 10%, larger than percent-level Ly-alpha BAO precision."
