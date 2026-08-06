@@ -1,28 +1,43 @@
 # Cosmological Quantum Information Transport (CQIT)
 
-This repository now focuses on how redshift, photon loss, detector mode mismatch, noise, and horizons affect the **accessible quantum and classical information carried by light**.
+This repository studies how redshift, photon loss, detector mismatch, noise, and horizons affect the information carried by light. It also maintains executable falsification tests for proposed alternatives to cosmological expansion.
 
-The repository retains its historical `path-dependent-optical-expansion` name, but the original PDOE redshift mechanism is archived and falsified. See `docs/ARCHIVED_PDOE.md`.
+The historical repository name is `path-dependent-optical-expansion`. The original circumference-driven PDOE mechanism is archived and falsified in `docs/ARCHIVED_PDOE.md`.
 
-## Is this new physics?
+## Current v7 result
 
-No. The central ingredients are established physics:
+The newest audit tests the stationary continuous-loss law
 
-- finite-bandwidth redshift can act as coherent multimode mixing;
-- wavepackets stretch in time and shift in frequency;
-- photon loss and receiver mismatch reduce accessible channel capacity;
-- horizon communication rates can tend to zero asymptotically.
+\[
+\frac{dE}{dr}=-\frac{H_0}{c}E,
+\qquad
+1+z=\exp(H_0r/c),
+\]
 
-The new research focus is an integrated **null-test framework**. It asks whether real data contain residual decoherence, polarization effects, timing anomalies, or excess noise beyond coherent redshift, ordinary loss, receiver mismatch, and known backgrounds.
+with photon speed kept equal to `c`.
 
-## Standard channel
+The pure model is **falsified** by five independent observational gates:
+
+- DES Type Ia supernova time dilation;
+- the physical CMB temperature at `z=0.89`;
+- cosmic distance duality;
+- distance duality even after adding an engineered pulse stretch;
+- radial-versus-transverse BAO geometry.
+
+A stochastic collision implementation is additionally forced into an extreme coherent limit: at `z=1`, ESPRESSO-like resolving power requires roughly `9.4×10^9` microscopic events with per-event logarithmic loss below `7.4×10^-11`.
+
+The only broad escape is to modify pulse timing, radiation temperature, angular focusing, clocks, and rulers together. Operationally that becomes an evolving effective metric cosmology rather than simple tired light.
+
+## CQIT null model
+
+The information-transport program remains
 
 \[
 \mathcal N_{\rm standard}
 =\mathcal D_{\rm receiver}\circ\mathcal L_\eta\circ\mathcal U_z.
 \]
 
-Only a reproducible failure of this calibrated null model could become a candidate for new physics.
+Only a reproducible residual beyond coherent redshift, ordinary loss, receiver mismatch, and known backgrounds could become a candidate for new physics.
 
 ## Run
 
@@ -31,14 +46,16 @@ python -m pip install -e .[test]
 pytest
 python run_quantum_information_audit.py
 python run_cqit_focus.py
+python run_continuous_loss_audit.py
 ```
 
 ## Validation
 
-The v6 working tree passes **44 automated tests** locally. GitHub Actions tests Python 3.10 and 3.12.
+Before publication, v7 passed **12/12 new focused tests locally**. GitHub Actions runs the complete repository suite and every analysis script on Python 3.10 and 3.12.
 
 ## Research documents
 
-- `docs/CQIT_RESEARCH_PROGRAM.md` — current focus and discovery standard
-- `docs/V5_QUANTUM_INFORMATION_AUDIT.md` — executed redshift/information audit
-- `docs/ARCHIVED_PDOE.md` — rejected original hypothesis
+- `docs/V7_CONTINUOUS_LOSS_FALSIFICATION.md` — new energy-loss theory audit
+- `docs/CQIT_RESEARCH_PROGRAM.md` — current information-transport null tests
+- `docs/V5_QUANTUM_INFORMATION_AUDIT.md` — redshift and quantum-information audit
+- `docs/ARCHIVED_PDOE.md` — rejected original circumference hypothesis
