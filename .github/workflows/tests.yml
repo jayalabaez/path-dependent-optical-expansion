@@ -22,3 +22,4 @@ jobs:
       - run: python run_comprehensive_audit.py
       - run: python run_quantum_information_audit.py
       - run: python run_cqit_focus.py
+      - run: python run_continuous_loss_audit.py
