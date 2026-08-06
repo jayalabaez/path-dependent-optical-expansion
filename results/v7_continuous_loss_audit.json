@@ -1,0 +1,139 @@
+{
+  "model": {
+    "name": "stationary continuous fractional photon-energy loss",
+    "law": "dE/dr=-(H0/c)E",
+    "distance_redshift": "1+z=exp(H0 r/c)",
+    "photon_speed_changed": false,
+    "pure_model_time_dilation_exponent": 0.0
+  },
+  "constants": {
+    "H0_km_s_Mpc": 70.0,
+    "loss_coefficient_per_m": 7.567053279942939e-27,
+    "loss_length_Gpc": 4.282749399999999,
+    "one_AU_fractional_shift": 1.1320150581529152e-15
+  },
+  "diagnostics": {
+    "time_dilation_sigma_pure": 89.71104725729155,
+    "time_dilation_sigma_engineered": 0.26832815729996506,
+    "cmb_static_sigma": 40.07533333333333,
+    "cmb_evolving_sigma": 0.3526200000000035,
+    "distance_duality_eta_z1_pure": 0.3535533905932738,
+    "distance_duality_eta_z1_engineered": 0.5,
+    "distance_duality_sigma_pure": 26.73786437626905,
+    "distance_duality_sigma_engineered": 20.88,
+    "stochastic_min_events_z1_R140k": 9416879072.796747,
+    "stochastic_max_log_loss_per_event": 7.360688984127365e-11,
+    "bao": [
+      {
+        "z": 0.5,
+        "f_ap_static": 0.6081976621622466,
+        "f_ap_lcdm": 0.5770832280035946,
+        "fractional_difference": 0.053916718852307755
+      },
+      {
+        "z": 1.0,
+        "f_ap_static": 1.3862943611198906,
+        "f_ap_lcdm": 1.358237508072133,
+        "fractional_difference": 0.020656809196486714
+      },
+      {
+        "z": 2.33,
+        "f_ap_static": 4.005897772294534,
+        "f_ap_lcdm": 4.505662896034949,
+        "fractional_difference": -0.1109193331308066
+      }
+    ],
+    "redshift_drift_z3p962": {
+      "static_loss_dz_per_year": 0.0,
+      "lcdm_dz_per_year": -8.229867997712629e-11,
+      "lcdm_velocity_drift_m_s_per_year": -0.004972294147621539,
+      "current_espresso_velocity_m_s_per_year": -3.5,
+      "current_espresso_sigma_m_s_per_year": 3.6
+    }
+  },
+  "tests": [
+    {
+      "name": "DES supernova time dilation: pure energy-loss model",
+      "status": "FALSIFIED",
+      "statistic": 89.71104725729155,
+      "unit": "sigma",
+      "threshold": 5.0,
+      "note": "Pure energy loss predicts b=0, while DES measures b=1.003±0.005(stat)±0.010(sys)."
+    },
+    {
+      "name": "DES time dilation: engineered pulse-stretch variant",
+      "status": "PASS",
+      "statistic": 0.26832815729996506,
+      "unit": "sigma",
+      "threshold": 2.0,
+      "note": "Adding an independent (1+z) pulse stretch passes this one observable but is no longer pure energy loss."
+    },
+    {
+      "name": "CMB temperature at z=0.89: path-only static bath",
+      "status": "FALSIFIED",
+      "statistic": 40.07533333333333,
+      "unit": "sigma",
+      "threshold": 5.0,
+      "note": "A path-only model predicts the local bath remains T0; ALMA measures 5.13±0.06 K."
+    },
+    {
+      "name": "CMB temperature: globally evolving radiation field",
+      "status": "PASS",
+      "statistic": 0.3526200000000035,
+      "unit": "sigma",
+      "threshold": 2.0,
+      "note": "T(z)=T0(1+z) passes, but requires global cosmic evolution rather than distance-only loss."
+    },
+    {
+      "name": "Distance duality: pure energy-loss static geometry",
+      "status": "FALSIFIED",
+      "statistic": 26.73786437626905,
+      "unit": "sigma diagnostic",
+      "threshold": 5.0,
+      "note": "At z=1 the model gives eta=2^-3/2; converted to the linear eta0 diagnostic it is far from PantheonPlus+BAO."
+    },
+    {
+      "name": "Distance duality: energy loss plus pulse stretch",
+      "status": "FALSIFIED",
+      "statistic": 20.88,
+      "unit": "sigma diagnostic",
+      "threshold": 5.0,
+      "note": "Adding time dilation changes eta(z=1) to 1/2, still far from eta≈1 unless focusing/geometry also evolves."
+    },
+    {
+      "name": "Stochastic collision broadening at z=1",
+      "status": "CONSTRAINED",
+      "statistic": 9416879072.796747,
+      "unit": "minimum events",
+      "threshold": 1000000000.0,
+      "note": "At R=140,000, a Poisson collision model needs >~10^10 tiny events to avoid resolvable broadening."
+    },
+    {
+      "name": "Stationary redshift drift",
+      "status": "FUTURE_TEST",
+      "statistic": 0.0,
+      "unit": "dz/yr",
+      "threshold": null,
+      "note": "A stationary path-loss law predicts zero drift; current ESPRESSO uncertainty is still much too large."
+    },
+    {
+      "name": "BAO Alcock-Paczynski geometry at z=2.33",
+      "status": "FALSIFIED",
+      "statistic": 0.1109193331308066,
+      "unit": "fraction",
+      "threshold": 0.02,
+      "note": "Static r∝ln(1+z) geometry differs by order 10%, larger than percent-level Ly-alpha BAO precision."
+    }
+  ],
+  "n_tests": 9,
+  "n_falsified": 5,
+  "fatal_tests": [
+    "DES supernova time dilation: pure energy-loss model",
+    "CMB temperature at z=0.89: path-only static bath",
+    "Distance duality: pure energy-loss static geometry",
+    "Distance duality: energy loss plus pulse stretch",
+    "BAO Alcock-Paczynski geometry at z=2.33"
+  ],
+  "verdict": "The pure stationary continuous photon-energy-loss model is falsified. It can be repaired observable by observable only by adding pulse-time stretching, global radiation-temperature evolution, and evolving focusing/geometry. Those repairs turn it into an effective metric cosmology rather than a simple tired-light mechanism.",
+  "whole_new_physics_confirmed": false
+}
